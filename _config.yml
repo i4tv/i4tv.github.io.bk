@@ -13,12 +13,20 @@ custom:
     category:
         home: 首页
         products: 产品
+        solutions: 解决方案
+        about: 关于我们
     categories:
       - name:  home
         title: 首页
 
       - name:  products
         title: 产品
+
+      - name: solutions
+        title: 解决方案
+
+      - name: about
+        title: 关于我们
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
