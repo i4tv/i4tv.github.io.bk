@@ -11,14 +11,14 @@ desc: 利用互联网看电视，利用电视访问互联网。
 
 custom:
     category:
-        default: Default Category
-        another: Another Category
+        home: 首页
+        products: 产品
     categories:
-      - name:  default
-        title: Default Category
+      - name:  home
+        title: 首页
 
-      - name:  another
-        title: Another Category
+      - name:  products
+        title: 产品
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
