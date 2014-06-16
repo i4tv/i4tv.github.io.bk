@@ -28,13 +28,13 @@ gstreamill典型的应用就是用于DVB/OTT网关：
 
 首先从https://github.com/zhangping/gstreamill下载gstreamill的源码，目前gstreamill只在ubuntu 13.10下进行过测试。要编译安装gstreamill，需要先安装如下软件包：
 
-*. gnome-common
-*. autoconf
-*. automake
-*. libtool
-*. gstreamer-devel
-*. gstreamer-plugins-base-devel
-*. 准备好后，进入源码目录执行如下命令安装：
+* gnome-common
+* autoconf
+* automake
+* libtool
+* gstreamer-devel
+* gstreamer-plugins-base-devel
+* 准备好后，进入源码目录执行如下命令安装：
 
     ./autogen.sh
     ./configure (--help)
