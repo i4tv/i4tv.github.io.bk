@@ -34,7 +34,8 @@ gstreamill典型的应用就是用于DVB/OTT网关：
 * libtool
 * gstreamer-devel
 * gstreamer-plugins-base-devel
-* 准备好后，进入源码目录执行如下命令安装：
+
+准备好后，进入源码目录执行如下命令安装：
 
     ./autogen.sh
     ./configure (--help)
