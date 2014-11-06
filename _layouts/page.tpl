@@ -10,35 +10,73 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/site.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/code/github.css" />
-{% for style in page.styles %}<link rel="stylesheet" type="text/css" href="{{ style }}" />
+{% for style in page.styles %}
+<link rel="stylesheet" type="text/css" href="{{ style }}" />
 {% endfor %}
 </head>
 
 <body class="{{ page.pageClass }}">
 
-<div class="main">
-	{{ content }}
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/admin/"><img src="/admin/img/logo.png"> Gstreamill</a>
+        </div>
 
-	<footer>
-		<p>&copy; Since 2012</p>
-	</footer>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span data-i18n="nav.System"></span><b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/admin/gstreamill.html" data-i18n="nav.Gstreamill Manage"></a></li>
+                        <li><a href="/admin/system.html" data-i18n="nav.System Manage"></a></li>
+                        <li><a href="/admin/setnetwork.html" data-i18n="nav.Set Network"></a></li>
+                    </ul>
+                </li>
+                <li><a href="/admin/joblist.html" data-i18n="nav.Jobs"></a></li>
+                <li><a href="/admin/mediaman.html" data-i18n="nav.Media"></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="main">
+    {{ content }}
+
+    <footer>
+        <p>&copy; Since 2012</p>
+    </footer>
 </div>
 
 <aside>
-	<h2><a href="/">{{ site.name }}</a><a href="/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
+    <h2>
+        <a href="/">{{ site.name }}</a>
+        <a href="/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a>
+    </h2>
 	
-	<nav class="block">
-		<ul>
-		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="/category/{{ category.name }}/">{{ category.title }}</a></li>
-		{% endfor %}
-		</ul>
-	</nav>
+    <nav class="block">
+        <ul>
+            {% for category in site.custom.categories %}
+                <li class="{{ category.name }}"><a href="/category/{{ category.name }}/">{{ category.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
 	
-	<form action="/search/" class="block block-search">
-		<h3>Search</h3>
-		<p><input type="search" name="q" placeholder="Search" /></p>
-	</form>
-	
+    <form action="/search/" class="block block-search">
+        <h3>Search</h3>
+        <p><input type="search" name="q" placeholder="Search" /></p>
+    </form>
+
 	<div class="block block-about">
 		<h3>About</h3>
 		<figure>
